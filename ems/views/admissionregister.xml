@@ -1,0 +1,141 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="admissionregister1_list">
+      <field name="name">admissionregister list</field>
+      <field name="model">admissionregister.admissionregister</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="na1"/>
+        </tree>
+      </field>
+    </record>
+
+     <record model="ir.ui.view" id="admissionregister2_list">
+      <field name="name">admissionregister list</field>
+      <field name="model">admissionregister.admissionregister</field>
+      <field name="arch" type="xml">
+        <form>
+            <sheet>
+
+
+<!--                            1-->
+                      <h2>Personal Information</h2>
+                <div style="width: 300px;">
+                      <field name="na1" placeholder="FirstName"/>
+                      <field name="na2" placeholder="MiddleName"/>
+                      <field name="na3" placeholder="LastName"/>
+                </div>
+                <group>
+<!--                            1-->
+                    <group string="School Information">
+                          <field name="na4" placeholder="SchoolName"/>
+                          <field name="na5"/>
+                    </group>
+
+                    <!--                           2-->
+                    <group string="Class Information">
+                        <field name="na12" placeholder="Medium"/>
+                        <field name="na13" placeholder="Class"/>
+                    </group>
+<!--                                        3                    -->
+                           <group>
+                           <label for="street" string="Address"/>
+                                <div class="o_address_format">
+                                    <field name="na6" placeholder="Street..." class="o_address_street"/>
+                                    <field name="na7" placeholder="Street 2..." class="o_address_street"/>
+                                    <field name="na8" placeholder="Country" class="o_address_country"/>
+                                    <field name="na9" placeholder="City" class="o_address_city"/>
+                                    <field name="na10" class="o_address_zip" placeholder="State"/>
+                                    <field name="na11" placeholder="ZIP" class="o_address_zip"/>
+                                </div>
+                       </group>
+
+<!--                              4-->
+                       <group>
+                           <field name="na14" placeholder="Phone"/>
+                           <field name="na141" placeholder="Mobile"/>
+                           <field name="na15" placeholder="Email"/>
+                           <field name="na16" placeholder="Weblink"/>
+                        </group>
+
+
+
+
+
+
+
+<!--                                    5-->
+                                <group string="General Information">
+                                    <field name="na17" placeholder="Gender"/>
+                                    <field name="na18" placeholder="Birthdate"/>
+                                    <field name="na19" style="border:none;:"/>
+                                </group>
+
+<!--                                            6-->
+                                     <group><br></br><br></br><br></br>
+                                         <field name="na1117" placeholder="Mother tongue"/>
+                                         <field name="na1118" placeholder="Admssiondate"/>
+                                         <field name="na1119" placeholder="select marital status"/>
+
+                                     </group>
+<!--                                                  7-->
+                                     <group string="Emergency Contact Deatails">
+                                         <field name="na20" placeholder="phonenumber"/>
+                                     </group>
+<!--                                               8-->
+                                            <group><br></br><br></br><br></br><br></br>
+                                              <field name="na21" placeholder="Mobilenumber"/>
+                                            </group>
+
+                </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="admissionregister3action_window">
+      <field name="name">admissionregister window</field>
+      <field name="res_model">admissionregister.admissionregister</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="ems.action_server">
+      <field name="name">EMS server</field>
+      <field name="model_id" ref="model_ems_ems"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+
+    <menuitem name="Admission Register" id="admissionregister78menu_root" action="admissionregister3action_window" parent="ems.menu_root"/>
+
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="ems.menu_1" parent="ems.menu_root"/>
+    <menuitem name="Menu 2" id="ems.menu_2" parent="ems.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="ems.menu_1_list" parent="ems.menu_1"
+              action="ems.action_window"/>
+    <menuitem name="Server to list" id="ems" parent="ems.menu_2"
+              action="ems.action_server"/>
+-->
+  </data>
+</odoo>

@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ems_ems,ems.ems,model_ems_ems,base.group_user,1,1,1,1
+access_admissionregister_admissionregister,admissionregister.admissionregister,model_admissionregister_admissionregister,base.group_user,1,1,1,1
+access_profiles_profiles,profiles.profiles,model_profiles_profiles,base.group_user,1,1,1,1
+access_reminders_reminders,reminders.reminders,model_reminders_reminders,base.group_user,1,1,1,1
+access_configurations_configurations,configurations.configurations,model_configurations_configurations,base.group_user,1,1,1,1
+access_teachers_teachers,teachers.teachers,model_teachers_teachers,base.group_user,1,1,1,1
+access_parents_parents,parents.parents,model_parents_parents,base.group_user,1,1,1,1
